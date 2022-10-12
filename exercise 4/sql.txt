@@ -1,0 +1,28 @@
+CREATE TABLE `tv_series` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`title` TEXT,
+	`channel` TINYINT,
+	`gender` VARCHAR(7),
+	PRIMARY KEY (`id`)
+);
+
+INSERT INTO tv_series (title, channel, gender) VALUES
+	('Rambo', 1, 'male'),
+	('Clark', 1, 'male'),
+	('John', 1, 'male'),
+	('Harry', 1, 'male');
+
+CREATE TABLE `tv_series_intervals` (
+	`id_tv_series` INT,
+	`week_day,` VARCHAR(15),
+	`show_time` DATETIME,
+    CONSTRAINT fk_tv_serie
+    FOREIGN KEY (id_tv_series) 
+        REFERENCES tv_series(id)
+);
+
+INSERT INTO tv_series_intervals (id_tv_series, week_day, show_time) VALUES
+	(1, 'Monday', '2020-09-20 12:00:01'),
+	(2, 'Tuesday', '2020-09-21 12:00:01'),
+	(3, 'friday', '2020-09-25 12:00:01'),
+	(4, 'Thrusday', '2020-09-24 12:00:01');

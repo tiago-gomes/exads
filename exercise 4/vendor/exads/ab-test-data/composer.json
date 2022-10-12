@@ -1,0 +1,25 @@
+{
+    "name": "exads/ab-test-data",
+    "description": "A class that delivers a structured data for A/B Testing",
+    "license": "GPL-3.0-or-later",
+    "keywords": ["exads", "php", "test", "ab"],
+    "version": "1.0",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exads\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4" : {
+            "Exads\\Test\\": "test/"
+        }
+    }
+}
